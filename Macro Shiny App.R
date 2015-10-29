@@ -16,10 +16,10 @@ server <- function(input, output){
   output$datatable <- DT::renderDataTable({ 
     
     ## data location ----
+    ## We are going to economic data from elsewhere
     url <- "https://raw.githubusercontent.com/OpenExoplanetCatalogue/oec_tables/master/comma_separated/open_exoplanet_catalogue.txt"
     
     ### get data
-    ### old: worked locally but not on shinyapps   
     # data <- read.csv(url, skip = 30, stringsAsFactors = F)
     
     ## modified code from http://stackoverflow.com/questions/32416864/dealing-with-raw-vector-from-r-geturlcontent
